@@ -1,4 +1,815 @@
+// SS Auto - Paint & Body Repair JavaScript
 // Tailwind CSS Configuration
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: '#ff6b35',
+                secondary: '#f7931e',
+                accent: '#ff4500',
+                dark: '#1a1a1a',
+                light: '#f8fafc'
+            },
+            fontFamily: {
+                'thai': ['Kanit', 'sans-serif'],
+            },
+            animation: {
+                'float': 'float 6s ease-in-out infinite',
+                'glow': 'glow 2s ease-in-out infinite alternate',
+                'slide-in': 'slide-in 0.8s ease-out',
+                'fade-in': 'fade-in 1s ease-out',
+                'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
+                'rotate-slow': 'rotate-slow 20s linear infinite',
+                'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+                'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(-20px)' },
+                },
+                'glow': {
+                    '0%': { boxShadow: '0 0 20px rgba(255, 107, 53, 0.5)' },
+                    '100%': { boxShadow: '0 0 40px rgba(255, 107, 53, 0.8)' },
+                },
+                'slide-in': {
+                    '0%': { opacity: '0', transform: 'translateX(-100px)' },
+                    '100%': { opacity: '1', transform: 'translateX(0)' },
+                },
+                'fade-in': {
+                    '0%': { opacity: '0', transform: 'translateY(30px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                'bounce-gentle': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                },
+                'rotate-slow': {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' },
+                },
+                'pulse-soft': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.7' },
+                },
+                'shimmer': {
+                    '0%': { backgroundPosition: '-200% 0' },
+                    '100%': { backgroundPosition: '200% 0' },
+                },
+            }
+        }
+    }
+}
+
+// DOM Content Loaded Event
+document.addEventListener('DOMContentLoaded', function() {
+    initializeApp();
+});
+
+// Initialize Application
+function initializeApp() {
+    initializeLoading();
+    initializeMobileMenu();
+    initializeSmoothScrolling();
+    initializeNavbarEffects();
+    initializeScrollToTop();
+    initializeScrollReveal();
+    initializeParallaxEffects();
+    initializeRippleEffects();
+    initializeGreeting();
+    initializeCardAnimations();
+    initializeKeyboardNavigation();
+    initializeHoverEffects();
+    initializePerformanceOptimizations();
+    initializeAccessibilityFeatures();
+    initializeSSAutoFeatures();
+}
+
+// Loading Screen
+function initializeLoading() {
+    window.addEventListener('load', () => {
+        const loading = document.getElementById('loading');
+        if (loading) {
+            setTimeout(() => {
+                loading.style.opacity = '0';
+                loading.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    loading.style.display = 'none';
+                }, 500);
+            }, 1500);
+        }
+    });
+}
+
+// Mobile Menu Toggle
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+            
+            // Track menu usage
+            trackEvent('navigation', 'mobile_menu_toggled');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+}
+
+// Smooth Scrolling
+function initializeSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                // Track navigation
+                trackEvent('navigation', 'section_clicked', this.getAttribute('href'));
+            }
+        });
+    });
+}
+
+// Navbar Scroll Effects
+function initializeNavbarEffects() {
+    const navbar = document.getElementById('navbar');
+    
+    if (navbar) {
+        window.addEventListener('scroll', debounce(() => {
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(26, 26, 26, 0.95)';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = '0 4px 30px rgba(255, 107, 53, 0.2)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+                navbar.style.backdropFilter = 'blur(20px)';
+                navbar.style.boxShadow = 'none';
+            }
+        }, 16));
+    }
+}
+
+// Scroll to Top Button
+function initializeScrollToTop() {
+    const scrollToTop = document.getElementById('scrollToTop');
+    
+    if (scrollToTop) {
+        window.addEventListener('scroll', debounce(() => {
+            if (window.scrollY > 100) {
+                scrollToTop.classList.remove('opacity-0', 'invisible');
+            } else {
+                scrollToTop.classList.add('opacity-0', 'invisible');
+            }
+        }, 16));
+        
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Track scroll to top usage
+            trackEvent('navigation', 'scroll_to_top_clicked');
+        });
+    }
+}
+
+// Scroll Reveal Animation
+function initializeScrollReveal() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                
+                // Track section views
+                if (entry.target.tagName === 'SECTION') {
+                    trackEvent('page_view', 'section_viewed', entry.target.id);
+                }
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Parallax Effects
+function initializeParallaxEffects() {
+    const parallaxElements = document.querySelectorAll('.parallax-element');
+    
+    if (parallaxElements.length > 0) {
+        window.addEventListener('scroll', debounce(() => {
+            const scrolled = window.pageYOffset;
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        }, 16));
+    }
+}
+
+// Ripple Effects
+function initializeRippleEffects() {
+    document.querySelectorAll('button, .card-hover').forEach(element => {
+        element.addEventListener('click', function(e) {
+            const ripple = document.createElement('div');
+            ripple.classList.add('ripple');
+            
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+}
+
+// Dynamic Greeting
+function initializeGreeting() {
+    const updateGreeting = () => {
+        const hour = new Date().getHours();
+        let greeting = '';
+        
+        if (hour < 12) {
+            greeting = 'สวัสดีตอนเช้า! 🌅 SS Auto พร้อมให้บริการ';
+        } else if (hour < 17) {
+            greeting = 'สวัสดีตอนบ่าย! ☀️ SS Auto ยินดีให้บริการ';
+        } else {
+            greeting = 'สวัสดีตอนเย็น! 🌆 SS Auto พร้อมช่วยเหลือคุณ';
+        }
+        
+        // Store greeting for potential use
+        window.currentGreeting = greeting;
+        console.log('Current greeting:', greeting);
+    };
+
+    updateGreeting();
+    
+    // Update greeting every hour
+    setInterval(updateGreeting, 3600000);
+}
+
+// Card Animations
+function initializeCardAnimations() {
+    document.querySelectorAll('.card-hover').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-15px) scale(1.05)';
+            card.style.boxShadow = '0 25px 50px rgba(255, 107, 53, 0.2)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+            card.style.boxShadow = '';
+        });
+    });
+}
+
+// Keyboard Navigation
+function initializeKeyboardNavigation() {
+    document.addEventListener('keydown', (e) => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        switch(e.key) {
+            case 'Escape':
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                }
+                break;
+            case 'Tab':
+                // Enhance tab navigation
+                document.body.classList.add('keyboard-navigation');
+                break;
+        }
+    });
+    
+    document.addEventListener('mousedown', () => {
+        document.body.classList.remove('keyboard-navigation');
+    });
+}
+
+// Hover Effects
+function initializeHoverEffects() {
+    document.querySelectorAll('.neon-glow').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            element.style.transform = 'translateY(-2px)';
+            element.style.boxShadow = '0 0 30px rgba(255, 107, 53, 0.5), 0 0 60px rgba(255, 107, 53, 0.3)';
+        });
+        
+        element.addEventListener('mouseleave', () => {
+            element.style.transform = 'translateY(0)';
+            element.style.boxShadow = '0 0 20px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 107, 53, 0.2)';
+        });
+    });
+}
+
+// Performance Optimizations
+function initializePerformanceOptimizations() {
+    // Lazy loading for images
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => {
+        imageObserver.observe(img);
+    });
+    
+    // Preload critical resources
+    const preloadLinks = [
+        'styles.css',
+        'https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap'
+    ];
+    
+    preloadLinks.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = href.includes('.css') ? 'style' : 'font';
+        if (href.includes('fonts.googleapis.com')) {
+            link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
+    });
+}
+
+// Accessibility Features
+function initializeAccessibilityFeatures() {
+    // Focus management
+    const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    // Skip link functionality
+    const skipLink = document.querySelector('.skip-link');
+    if (skipLink) {
+        skipLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(skipLink.getAttribute('href'));
+            if (target) {
+                target.focus();
+            }
+        });
+    }
+    
+    // Announce page changes to screen readers
+    const announcePageChange = (message) => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.classList.add('sr-only');
+        announcement.textContent = message;
+        document.body.appendChild(announcement);
+        
+        setTimeout(() => {
+            if (document.body.contains(announcement)) {
+                document.body.removeChild(announcement);
+            }
+        }, 1000);
+    };
+    
+    // Monitor section changes
+    let currentSection = '';
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const newSection = entry.target.id;
+                if (newSection !== currentSection) {
+                    currentSection = newSection;
+                    announcePageChange(`เข้าสู่ส่วน ${getSectionTitle(newSection)}`);
+                }
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('section[id]').forEach(section => {
+        sectionObserver.observe(section);
+    });
+}
+
+// SS Auto Specific Features
+function initializeSSAutoFeatures() {
+    // Track phone number clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', () => {
+            trackEvent('contact', 'phone_clicked', link.href);
+        });
+    });
+    
+    // Track email clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', () => {
+            trackEvent('contact', 'email_clicked', link.href);
+        });
+    });
+    
+    // Track map clicks
+    document.querySelectorAll('a[href*="maps.google.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+            trackEvent('contact', 'map_clicked');
+        });
+    });
+    
+    // Add hover effects to service cards
+    document.querySelectorAll('.animated-border').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.animation = 'shimmer 1s ease-in-out infinite';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.animation = 'shimmer 3s ease-in-out infinite';
+        });
+    });
+    
+    // Auto-play floating animations
+    startFloatingAnimations();
+}
+
+// Floating Animations
+function startFloatingAnimations() {
+    const floatingIcons = document.querySelectorAll('.floating-icons .icon');
+    
+    floatingIcons.forEach((icon, index) => {
+        const delay = index * 1000;
+        const duration = 8000 + (Math.random() * 2000);
+        
+        setTimeout(() => {
+            icon.style.animation = `float ${duration}ms ease-in-out infinite`;
+        }, delay);
+    });
+}
+
+// Utility Functions
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+function getSectionTitle(sectionId) {
+    const titles = {
+        'home': 'หน้าหลัก',
+        'services': 'บริการ',
+        'about': 'เกี่ยวกับเรา',
+        'gallery': 'ผลงาน',
+        'contact': 'ติดต่อเรา'
+    };
+    return titles[sectionId] || sectionId;
+}
+
+// Analytics and Tracking
+function trackEvent(category, action, label = null) {
+    // Google Analytics tracking
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            event_category: category,
+            event_label: label,
+            value: 1
+        });
+    }
+    
+    // Console log for development
+    console.log(`Track: ${category} - ${action} - ${label}`);
+}
+
+// Contact Form Handler
+function initializeContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            try {
+                // Show loading state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'กำลังส่ง...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Show success message
+                showNotification('ส่งข้อความสำเร็จ! เราจะติดต่อกลับเร็วที่สุด', 'success');
+                contactForm.reset();
+                
+                // Track form submission
+                trackEvent('contact', 'form_submitted');
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showNotification('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง', 'error');
+            } finally {
+                // Reset button state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+}
+
+// Notification System
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transition-all duration-300 transform translate-x-full ${getNotificationClasses(type)}`;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.classList.remove('translate-x-full');
+    }, 100);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        notification.classList.add('translate-x-full');
+        setTimeout(() => {
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
+        }, 300);
+    }, 5000);
+}
+
+function getNotificationClasses(type) {
+    const classes = {
+        success: 'bg-green-500 text-white',
+        error: 'bg-red-500 text-white',
+        warning: 'bg-yellow-500 text-black',
+        info: 'bg-blue-500 text-white'
+    };
+    return classes[type] || classes.info;
+}
+
+// Local Storage Management
+const Storage = {
+    set(key, value) {
+        try {
+            localStorage.setItem(`ssauto_${key}`, JSON.stringify(value));
+        } catch (e) {
+            console.warn('LocalStorage not available:', e);
+        }
+    },
+    
+    get(key) {
+        try {
+            const item = localStorage.getItem(`ssauto_${key}`);
+            return item ? JSON.parse(item) : null;
+        } catch (e) {
+            console.warn('Error reading from localStorage:', e);
+            return null;
+        }
+    },
+    
+    remove(key) {
+        try {
+            localStorage.removeItem(`ssauto_${key}`);
+        } catch (e) {
+            console.warn('Error removing from localStorage:', e);
+        }
+    }
+};
+
+// Online/Offline Status
+function initializeOfflineSupport() {
+    function updateOnlineStatus() {
+        const status = navigator.onLine ? 'online' : 'offline';
+        document.body.setAttribute('data-connection', status);
+        
+        if (!navigator.onLine) {
+            showNotification('คุณกำลังใช้งานแบบออฟไลน์', 'warning');
+        } else {
+            showNotification('เชื่อมต่ออินเทอร์เน็ตแล้ว', 'success');
+        }
+    }
+    
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    updateOnlineStatus();
+}
+
+// Error Handling
+function initializeErrorBoundary() {
+    window.addEventListener('error', (event) => {
+        console.error('JavaScript error:', event.error);
+        
+        // Show user-friendly error message
+        showNotification('เกิดข้อผิดพลาดบางอย่าง กรุณาลองรีเฟรชหน้าเว็บ', 'error');
+        
+        // Track error
+        trackEvent('error', 'javascript_error', event.error.message);
+    });
+    
+    window.addEventListener('unhandledrejection', (event) => {
+        console.error('Unhandled promise rejection:', event.reason);
+        
+        // Track promise rejection
+        trackEvent('error', 'promise_rejection', event.reason);
+    });
+}
+
+// PWA Features
+function initializePWAFeatures() {
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+    
+    // Install prompt
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        showInstallPrompt();
+    });
+    
+    function showInstallPrompt() {
+        const installButton = document.createElement('button');
+        installButton.textContent = 'ติดตั้งแอป SS Auto';
+        installButton.className = 'fixed bottom-20 right-4 bg-orange-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-orange-600 transition-colors z-40';
+        
+        installButton.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                
+                if (outcome === 'accepted') {
+                    trackEvent('pwa', 'installed');
+                    showNotification('ติดตั้งแอป SS Auto สำเร็จ!', 'success');
+                }
+                
+                deferredPrompt = null;
+                if (document.body.contains(installButton)) {
+                    document.body.removeChild(installButton);
+                }
+            }
+        });
+        
+        document.body.appendChild(installButton);
+        
+        // Remove button after 10 seconds if not clicked
+        setTimeout(() => {
+            if (document.body.contains(installButton)) {
+                document.body.removeChild(installButton);
+            }
+        }, 10000);
+    }
+}
+
+// Performance Monitoring
+function measurePerformance() {
+    if ('performance' in window) {
+        window.addEventListener('load', () => {
+            const perfData = performance.getEntriesByType('navigation')[0];
+            const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+            const domTime = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
+            
+            console.log('SS Auto Performance:');
+            console.log('Page load time:', loadTime, 'ms');
+            console.log('DOM content loaded:', domTime, 'ms');
+            
+            // Track performance
+            trackEvent('performance', 'page_load_time', Math.round(loadTime));
+        });
+    }
+}
+
+// Initialize all advanced features
+function initializeAdvancedFeatures() {
+    initializeContactForm();
+    initializeOfflineSupport();
+    initializeErrorBoundary();
+    initializePWAFeatures();
+    measurePerformance();
+}
+
+// Export functions for global use
+window.SSAuto = {
+    trackEvent,
+    showNotification,
+    Storage,
+    initializeAdvancedFeatures
+};
+
+// Initialize advanced features after DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    initializeAdvancedFeatures();
+});
+
+// Custom Events
+const SSAutoEvents = {
+    pageLoaded: new CustomEvent('ssauto:pageLoaded'),
+    sectionChanged: new CustomEvent('ssauto:sectionChanged'),
+    mobileMenuToggled: new CustomEvent('ssauto:mobileMenuToggled'),
+    scrollToTopClicked: new CustomEvent('ssauto:scrollToTopClicked')
+};
+
+
+// Dispatch page loaded event
+window.addEventListener('load', () => {
+    document.dispatchEvent(SSAutoEvents.pageLoaded);
+    
+    // Track page load
+    trackEvent('page', 'loaded');
+});
+
+// Special SS Auto greeting
+setTimeout(() => {
+    if (window.currentGreeting) {
+        console.log(`%c🚗 ${window.currentGreeting}`, 'color: #ff6b35; font-size: 16px; font-weight: bold;');
+    }
+}, 2000);
+
+// Console welcome message
+console.log(`
+%c🚗 SS AUTO - Paint & Body Repair
+%c📍 ซอยร่วมสุข 4/6 ถ.ติวานนท์ ต.บ้านใหม่ อ.เมืองปทุมธานี
+%c📞 084-554-5968 | 📧 s.s.auto@hotmail.com
+%c🎨 ผู้เชี่ยวชาญด้านพ่นสีรถยนต์และซ่อมตัวถัง
+%cDeveloped with ❤️ for premium automotive service
+`, 
+'color: #ff6b35; font-size: 18px; font-weight: bold;',
+'color: #f7931e; font-size: 12px;',
+'color: #ff4500; font-size: 12px; font-weight: bold;',
+'color: #333; font-size: 12px;',
+'color: #666; font-size: 10px;'
+);// Tailwind CSS Configuration
 tailwind.config = {
     theme: {
         extend: {
@@ -538,13 +1349,6 @@ function measurePerformance() {
 
 measurePerformance();
 
-// Custom Events
-const SSAutoEvents = {
-    pageLoaded: new CustomEvent('ssauto:pageLoaded'),
-    sectionChanged: new CustomEvent('ssauto:sectionChanged'),
-    mobileMenuToggled: new CustomEvent('ssauto:mobileMenuToggled'),
-    scrollToTopClicked: new CustomEvent('ssauto:scrollToTopClicked')
-};
 
 // Analytics Integration (Google Analytics example)
 function initializeAnalytics() {
@@ -590,35 +1394,6 @@ function trackEvent(category, action, label = null) {
         });
     }
 }
-
-// Local Storage Management
-const Storage = {
-    set(key, value) {
-        try {
-            localStorage.setItem(key, JSON.stringify(value));
-        } catch (e) {
-            console.warn('LocalStorage not available:', e);
-        }
-    },
-    
-    get(key) {
-        try {
-            const item = localStorage.getItem(key);
-            return item ? JSON.parse(item) : null;
-        } catch (e) {
-            console.warn('Error reading from localStorage:', e);
-            return null;
-        }
-    },
-    
-    remove(key) {
-        try {
-            localStorage.removeItem(key);
-        } catch (e) {
-            console.warn('Error removing from localStorage:', e);
-        }
-    }
-};
 
 // Theme Management
 function initializeThemeManager() {

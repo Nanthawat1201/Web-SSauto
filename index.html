@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ss Auto - Car Service Center | อู่สีรถยนต์ครบวงจร</title>
+    <title>SS Auto - Paint & Body Repair | อู่สีรถยนต์ครบวงจร ปทุมธานี</title>
+    <meta name="description" content="SS Auto - ผู้เชี่ยวชาญด้านพ่นสีรถยนต์และซ่อมตัวถัง ปทุมธานี บริการมืออาชีพ คุณภาพสูง ราคาเป็นกันเอง">
+    <meta name="keywords" content="อู่สีรถ, พ่นสีรถ, ซ่อมตัวถัง, ปทุมธานี, รังสิต, SS Auto">
+    <meta name="author" content="SS Auto">
+    <meta property="og:title" content="SS Auto - Paint & Body Repair">
+    <meta property="og:description" content="อู่สีรถยนต์ครบวงจร ปทุมธานี บริการมืออาชีพ">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -15,41 +21,38 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4 animate-slide-in">
-                    <div class="relative">
-                        <div class="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-2xl neon-glow">
-                            <span class="text-white text-2xl font-bold">S</span>
-                        </div>
-                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                    <div class="logo-container">
+                        <img src="" alt="SS Auto Logo" class="h-12 w-auto">
                     </div>
                     <div>
-                        <h1 class="text-2xl font-bold gradient-text">Ss Auto</h1>
-                        <p class="text-xs text-gray-500 font-medium">Premium Car Service</p>
+                        <h1 class="text-2xl font-bold gradient-text">SS Auto</h1>
+                        <p class="text-xs text-gray-500 font-medium">Paint & Body Repair</p>
                     </div>
                 </div>
                 
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-orange-500 transition-all duration-300 font-medium relative group">
                         หน้าหลัก
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                    <a href="#services" class="nav-link text-gray-700 hover:text-orange-500 transition-all duration-300 font-medium relative group">
                         บริการ
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-orange-500 transition-all duration-300 font-medium relative group">
                         เกี่ยวกับเรา
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#gallery" class="nav-link text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-orange-500 transition-all duration-300 font-medium relative group">
                         ผลงาน
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
                     </a>
-                    <a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+                    <a href="#contact" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105">
                         ติดต่อเรา
                     </a>
                 </div>
                 
-                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-primary transition-colors duration-300">
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition-colors duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -58,11 +61,11 @@
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="lg:hidden hidden mt-4 space-y-2 bg-white rounded-2xl shadow-2xl p-6">
-                <a href="#home" class="block py-3 text-gray-700 hover:text-primary transition-colors duration-300 font-medium">หน้าหลัก</a>
-                <a href="#services" class="block py-3 text-gray-700 hover:text-primary transition-colors duration-300 font-medium">บริการ</a>
-                <a href="#about" class="block py-3 text-gray-700 hover:text-primary transition-colors duration-300 font-medium">เกี่ยวกับเรา</a>
-                <a href="#gallery" class="block py-3 text-gray-700 hover:text-primary transition-colors duration-300 font-medium">ผลงาน</a>
-                <a href="#contact" class="block py-3 text-gray-700 hover:text-primary transition-colors duration-300 font-medium">ติดต่อเรา</a>
+                <a href="#home" class="block py-3 text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium">หน้าหลัก</a>
+                <a href="#services" class="block py-3 text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium">บริการ</a>
+                <a href="#about" class="block py-3 text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium">เกี่ยวกับเรา</a>
+                <a href="#gallery" class="block py-3 text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium">ผลงาน</a>
+                <a href="#contact" class="block py-3 text-gray-700 hover:text-orange-500 transition-colors duration-300 font-medium">ติดต่อเรา</a>
             </div>
         </div>
     </nav>
@@ -72,40 +75,43 @@
         <!-- Animated Background -->
         <div class="floating-icons">
             <div class="icon">🚗</div>
-            <div class="icon">🔧</div>
             <div class="icon">🎨</div>
-            <div class="icon">⚡</div>
+            <div class="icon">🔧</div>
             <div class="icon">✨</div>
+            <div class="icon">🛠️</div>
         </div>
         
         <!-- Animated Blobs -->
-        <div class="blob w-96 h-96 bg-primary/20 top-20 left-20 animate-float"></div>
-        <div class="blob w-80 h-80 bg-secondary/20 bottom-20 right-20 animate-float" style="animation-delay: 2s;"></div>
-        <div class="blob w-64 h-64 bg-accent/20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float" style="animation-delay: 4s;"></div>
+        <div class="blob w-96 h-96 bg-orange-500/20 top-20 left-20 animate-float"></div>
+        <div class="blob w-80 h-80 bg-red-500/20 bottom-20 right-20 animate-float" style="animation-delay: 2s;"></div>
+        <div class="blob w-64 h-64 bg-yellow-500/20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-float" style="animation-delay: 4s;"></div>
         
         <div class="container mx-auto px-6 py-32 relative z-10">
             <div class="text-center">
                 <div class="animate-fade-in">
+                    <div class="logo-container inline-block mb-8">
+                        <img src="" alt="SS Auto Logo" class="h-24 w-auto mx-auto">
+                    </div>
                     <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                        <span class="block">SS AUTO</span>
-                        <span class="block text-3xl lg:text-4xl font-light text-blue-200 mt-2">
-                            อู่สีรถยนต์ครบวงจร
+                        <span class="block gradient-text">SS AUTO</span>
+                        <span class="block text-3xl lg:text-4xl font-light text-gray-300 mt-2">
+                            Paint & Body Repair
                         </span>
                     </h1>
                 </div>
                 
                 <div class="animate-fade-in" style="animation-delay: 0.3s;">
-                    <p class="text-xl lg:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                        ผู้เชี่ยวชาญด้านการซ่อมแซมและพ่นสีรถยนต์<br>
-                        ด้วยเทคโนโลยีทันสมัยและช่างมืออาชีพ
+                    <p class="text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        ผู้เชี่ยวชาญด้านการพ่นสีรถยนต์และซ่อมตัวถัง<br>
+                        ปทุมธานี - บริการมืออาชีพด้วยคุณภาพระดับพรีเมี่ยม
                     </p>
                 </div>
                 
                 <div class="animate-fade-in flex flex-col sm:flex-row gap-6 justify-center items-center mb-12" style="animation-delay: 0.6s;">
-                    <a href="#contact" class="group bg-gradient-to-r from-accent to-blue-400 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-accent/25 neon-glow">
+                    <a href="tel:0845545968" class="group bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/25 neon-glow">
                         <span class="flex items-center space-x-2">
                             <span>📞</span>
-                            <span>ติดต่อเราเลย</span>
+                            <span>โทร 084-554-5968</span>
                             <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </span>
                     </a>
@@ -119,19 +125,31 @@
                 
                 <div class="animate-fade-in grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" style="animation-delay: 0.9s;">
                     <div class="glass-card rounded-2xl p-6 text-center card-hover">
-                        <div class="text-4xl mb-3 animate-bounce-gentle">⭐</div>
-                        <h3 class="text-white font-semibold text-lg mb-2">คุณภาพสูง</h3>
-                        <p class="text-blue-100 text-sm">มาตรฐานสากล ISO</p>
+                        <div class="text-4xl mb-3 animate-bounce-gentle">🎨</div>
+                        <h3 class="text-white font-semibold text-lg mb-2">พ่นสีมืออาชีพ</h3>
+                        <p class="text-gray-300 text-sm">คุณภาพระดับโรงงาน</p>
                     </div>
                     <div class="glass-card rounded-2xl p-6 text-center card-hover">
-                        <div class="text-4xl mb-3 animate-bounce-gentle" style="animation-delay: 0.5s;">🚀</div>
-                        <h3 class="text-white font-semibold text-lg mb-2">รวดเร็ว</h3>
-                        <p class="text-blue-100 text-sm">ส่งมอบตรงเวลา</p>
+                        <div class="text-4xl mb-3 animate-bounce-gentle" style="animation-delay: 0.5s;">🔧</div>
+                        <h3 class="text-white font-semibold text-lg mb-2">ซ่อมตัวถัง</h3>
+                        <p class="text-gray-300 text-sm">เทคนิคทันสมัย</p>
                     </div>
                     <div class="glass-card rounded-2xl p-6 text-center card-hover">
-                        <div class="text-4xl mb-3 animate-bounce-gentle" style="animation-delay: 1s;">💎</div>
-                        <h3 class="text-white font-semibold text-lg mb-2">ราคาดี</h3>
-                        <p class="text-blue-100 text-sm">คุ้มค่าที่สุด</p>
+                        <div class="text-4xl mb-3 animate-bounce-gentle" style="animation-delay: 1s;">⚡</div>
+                        <h3 class="text-white font-semibold text-lg mb-2">บริการรวดเร็ว</h3>
+                        <p class="text-gray-300 text-sm">ส่งมอบตรงเวลา</p>
+                    </div>
+                </div>
+                
+                <div class="animate-fade-in mt-12" style="animation-delay: 1.2s;">
+                    <div class="glass-card rounded-2xl p-6 max-w-2xl mx-auto">
+                        <div class="flex items-center justify-center space-x-4">
+                            <div class="text-2xl">📍</div>
+                            <div class="text-white">
+                                <p class="font-semibold">ซอยร่วมสุข 4/6 ถ.ติวานนท์</p>
+                                <p class="text-sm text-gray-300">ต.บ้านใหม่ อ.เมืองปทุมธานี</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,7 +164,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden">
+    <section id="services" class="py-20 bg-gradient-to-br from-white to-orange-50 relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 scroll-reveal">
                 <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
@@ -155,18 +173,18 @@
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                     ครบครันทุกความต้องการด้านรถยนต์ของคุณ
                 </p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="scroll-reveal group">
                     <div class="animated-border">
-                        <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 text-center card-hover">
+                        <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 text-center card-hover">
                             <div class="relative mb-6">
-                                <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
+                                <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
                                     🎨
                                 </div>
-                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full animate-pulse"></div>
+                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse"></div>
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">พ่นสีรถยนต์</h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -178,12 +196,12 @@
                 
                 <div class="scroll-reveal group">
                     <div class="animated-border">
-                        <div class="bg-gradient-to-br from-purple-50 to-pink-100 rounded-xl p-8 text-center card-hover">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 text-center card-hover">
                             <div class="relative mb-6">
-                                <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
+                                <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
                                     🔧
                                 </div>
-                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse"></div>
+                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">ซ่อมตัวถัง</h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -195,12 +213,12 @@
                 
                 <div class="scroll-reveal group">
                     <div class="animated-border">
-                        <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 text-center card-hover">
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 text-center card-hover">
                             <div class="relative mb-6">
                                 <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
                                     ✨
                                 </div>
-                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full animate-pulse"></div>
+                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-purple-400 rounded-full animate-pulse"></div>
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">ขัดเคลือบ</h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -212,12 +230,12 @@
                 
                 <div class="scroll-reveal group">
                     <div class="animated-border">
-                        <div class="bg-gradient-to-br from-orange-50 to-red-100 rounded-xl p-8 text-center card-hover">
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 text-center card-hover">
                             <div class="relative mb-6">
-                                <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
+                                <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
                                     🛠️
                                 </div>
-                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
+                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-orange-400 rounded-full animate-pulse"></div>
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">ซ่อมบำรุง</h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -229,12 +247,12 @@
                 
                 <div class="scroll-reveal group">
                     <div class="animated-border">
-                        <div class="bg-gradient-to-br from-teal-50 to-cyan-100 rounded-xl p-8 text-center card-hover">
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-8 text-center card-hover">
                             <div class="relative mb-6">
-                                <div class="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
+                                <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
                                     🛡️
                                 </div>
-                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-purple-400 rounded-full animate-pulse"></div>
+                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full animate-pulse"></div>
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">ประกันภัย</h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -246,12 +264,12 @@
                 
                 <div class="scroll-reveal group">
                     <div class="animated-border">
-                        <div class="bg-gradient-to-br from-indigo-50 to-purple-100 rounded-xl p-8 text-center card-hover">
+                        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 text-center card-hover">
                             <div class="relative mb-6">
-                                <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
+                                <div class="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto text-white text-3xl shadow-2xl">
                                     📋
                                 </div>
-                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-pink-400 rounded-full animate-pulse"></div>
+                                <div class="absolute -top-2 -right-2 w-6 h-6 bg-red-400 rounded-full animate-pulse"></div>
                             </div>
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">ตรวจสอบสภาพ</h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -265,50 +283,30 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white relative overflow-hidden">
+    <section id="about" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="scroll-reveal">
                     <h2 class="text-4xl lg:text-5xl font-bold mb-8">
                         เกี่ยวกับ <span class="gradient-text">SS AUTO</span>
                     </h2>
-                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mb-8 rounded-full"></div>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mb-8 rounded-full"></div>
                     
                     <div class="space-y-6">
-                        <p class="text-xl text-blue-100 leading-relaxed">
-                            <span class="text-accent font-semibold">SS AUTO</span> เป็นศูนย์บริการรถยนต์ครบวงจรที่มีประสบการณ์มากกว่า 
-                            <span class="text-yellow-400 font-bold">15 ปี</span> ในอุตสาหกรรมยานยนต์
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            <span class="text-orange-400 font-semibold">SS AUTO</span> เป็นศูนย์บริการรถยนต์ครบวงจรที่ตั้งอยู่ในใจกลางปทุมธานี 
+                            เชี่ยวชาญด้านการพ่นสีรถยนต์และซ่อมตัวถัง
                         </p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="glass-card rounded-xl p-6">
                                 <div class="flex items-center space-x-4 mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center">
                                         <span class="text-white text-xl">✓</span>
                                     </div>
-                                    <span class="text-blue-100 font-medium">ทีมช่างผู้เชี่ยวชาญ</span>
+                                    <span class="text-gray-300 font-medium">ทีมช่างผู้เชี่ยวชาญ</span>
                                 </div>
-                                <p class="text-blue-200 text-sm">ช่างมืออาชีพที่ผ่านการฝึกอบรมมาตรฐานสากล</p>
-                            </div>
-                            
-                            <div class="glass-card rounded-xl p-6">
-                                <div class="flex items-center space-x-4 mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
-                                        <span class="text-white text-xl">✓</span>
-                                    </div>
-                                    <span class="text-blue-100 font-medium">เทคโนโลยีทันสมัย</span>
-                                </div>
-                                <p class="text-blue-200 text-sm">อุปกรณ์และเครื่องมือที่ทันสมัยที่สุด</p>
-                            </div>
-                            
-                            <div class="glass-card rounded-xl p-6">
-                                <div class="flex items-center space-x-4 mb-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                        <span class="text-white text-xl">✓</span>
-                                    </div>
-                                    <span class="text-blue-100 font-medium">รับประกันคุณภาพ</span>
-                                </div>
-                                <p class="text-blue-200 text-sm">การันตีความพึงพอใจ 100%</p>
+                                <p class="text-gray-400 text-sm">ช่างมืออาชีพที่ผ่านการฝึกอบรมมาตรฐานสูง</p>
                             </div>
                             
                             <div class="glass-card rounded-xl p-6">
@@ -316,14 +314,34 @@
                                     <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center">
                                         <span class="text-white text-xl">✓</span>
                                     </div>
-                                    <span class="text-blue-100 font-medium">ราคาเป็นธรรม</span>
+                                    <span class="text-gray-300 font-medium">เทคโนโลยีทันสมัย</span>
                                 </div>
-                                <p class="text-blue-200 text-sm">คุ้มค่าและโปร่งใสทุกรายการ</p>
+                                <p class="text-gray-400 text-sm">อุปกรณ์และเครื่องมือที่ทันสมัยที่สุด</p>
+                            </div>
+                            
+                            <div class="glass-card rounded-xl p-6">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white text-xl">✓</span>
+                                    </div>
+                                    <span class="text-gray-300 font-medium">รับประกันคุณภาพ</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">การันตีความพึงพอใจ 100%</p>
+                            </div>
+                            
+                            <div class="glass-card rounded-xl p-6">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                                        <span class="text-white text-xl">✓</span>
+                                    </div>
+                                    <span class="text-gray-300 font-medium">ราคาเป็นธรรม</span>
+                                </div>
+                                <p class="text-gray-400 text-sm">คุ้มค่าและโปร่งใสทุกรายการ</p>
                             </div>
                         </div>
                         
-                        <p class="text-lg text-blue-100 leading-relaxed">
-                            เราให้บริการรถยนต์ทุกยี่ห้อและทุกรุ่น ด้วยมาตรฐานสากลและเทคโนโลยีที่ล้ำสมัย 
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            เราให้บริการรถยนต์ทุกยี่ห้อและทุกรุ่น ด้วยความใส่ใจในรายละเอียดและคุณภาพ 
                             พร้อมดูแลรถของคุณเหมือนรถของเราเอง
                         </p>
                     </div>
@@ -333,20 +351,20 @@
                     <div class="relative">
                         <div class="glass-card rounded-3xl p-12 text-center transform rotate-3 hover:rotate-0 transition-transform duration-500">
                             <div class="text-8xl mb-6 animate-float">🏆</div>
-                            <h3 class="text-4xl font-bold mb-4 gradient-text">15+</h3>
-                            <p class="text-xl text-blue-100 font-medium">ปีประสบการณ์</p>
+                            <h3 class="text-4xl font-bold mb-4 gradient-text">SS AUTO</h3>
+                            <p class="text-xl text-gray-300 font-medium">Paint & Body Repair</p>
                         </div>
                         
                         <div class="absolute -top-6 -right-6 glass-card rounded-2xl p-6 text-center transform -rotate-12 hover:rotate-0 transition-transform duration-500">
                             <div class="text-4xl mb-3 animate-bounce-gentle">⭐</div>
-                            <h4 class="text-lg font-semibold text-yellow-400">คุณภาพสูง</h4>
-                            <p class="text-blue-200 text-sm">ISO Standard</p>
+                            <h4 class="text-lg font-semibold text-orange-400">คุณภาพสูง</h4>
+                            <p class="text-gray-400 text-sm">Premium Quality</p>
                         </div>
                         
                         <div class="absolute -bottom-6 -left-6 glass-card rounded-2xl p-6 text-center transform rotate-12 hover:rotate-0 transition-transform duration-500">
                             <div class="text-4xl mb-3 animate-bounce-gentle" style="animation-delay: 1s;">🚀</div>
-                            <h4 class="text-lg font-semibold text-accent">บริการเร็ว</h4>
-                            <p class="text-blue-200 text-sm">Express Service</p>
+                            <h4 class="text-lg font-semibold text-orange-400">บริการเร็ว</h4>
+                            <p class="text-gray-400 text-sm">Fast Service</p>
                         </div>
                     </div>
                 </div>
@@ -355,7 +373,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-gradient-to-br from-white to-purple-50">
+    <section id="gallery" class="py-20 bg-gradient-to-br from-white to-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 scroll-reveal">
                 <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
@@ -364,41 +382,41 @@
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                     ชมผลงานคุณภาพสูงจากทีมช่างมืออาชีพ
                 </p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="scroll-reveal">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-8 text-white text-center card-hover neon-glow">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="relative z-10">
-                            <div class="text-7xl mb-6 animate-float">🚗</div>
-                            <h3 class="text-2xl font-bold mb-3">พ่นสีรถเก๋ง</h3>
-                            <p class="text-blue-100 mb-4">งานพ่นสีรถเก๋งคุณภาพสูงระดับโรงงาน</p>
-                            <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="scroll-reveal">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-teal-600 p-8 text-white text-center card-hover neon-glow">
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="relative z-10">
-                            <div class="text-7xl mb-6 animate-float" style="animation-delay: 0.5s;">🚙</div>
-                            <h3 class="text-2xl font-bold mb-3">ซ่อมตัวถัง SUV</h3>
-                            <p class="text-green-100 mb-4">ซ่อมตัวถังรถ SUV ให้กลับมาสมบูรณ์</p>
-                            <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="scroll-reveal">
                     <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 p-8 text-white text-center card-hover neon-glow">
                         <div class="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
+                            <div class="text-7xl mb-6 animate-float">🚗</div>
+                            <h3 class="text-2xl font-bold mb-3">พ่นสีรถเก๋ง</h3>
+                            <p class="text-orange-100 mb-4">งานพ่นสีรถเก๋งคุณภาพสูงระดับโรงงาน</p>
+                            <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 p-8 text-white text-center card-hover neon-glow">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10">
+                            <div class="text-7xl mb-6 animate-float" style="animation-delay: 0.5s;">🚙</div>
+                            <h3 class="text-2xl font-bold mb-3">ซ่อมตัวถัง SUV</h3>
+                            <p class="text-blue-100 mb-4">ซ่อมตัวถังรถ SUV ให้กลับมาสมบูรณ์</p>
+                            <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 p-8 text-white text-center card-hover neon-glow">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10">
                             <div class="text-7xl mb-6 animate-float" style="animation-delay: 1s;">🚚</div>
                             <h3 class="text-2xl font-bold mb-3">ซ่อมรถกระบะ</h3>
-                            <p class="text-orange-100 mb-4">งานซ่อมรถกระบะครบวงจร</p>
+                            <p class="text-green-100 mb-4">งานซ่อมรถกระบะครบวงจร</p>
                             <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
                         </div>
                     </div>
@@ -417,24 +435,24 @@
                 </div>
                 
                 <div class="scroll-reveal">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 p-8 text-white text-center card-hover neon-glow">
-                        <div class="absolute inset-0 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-600 p-8 text-white text-center card-hover neon-glow">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
                             <div class="text-7xl mb-6 animate-float" style="animation-delay: 2s;">🎨</div>
                             <h3 class="text-2xl font-bold mb-3">เปลี่ยนสีใหม่</h3>
-                            <p class="text-teal-100 mb-4">งานเปลี่ยนสีรถยนต์ทั้งคัน</p>
+                            <p class="text-yellow-100 mb-4">งานเปลี่ยนสีรถยนต์ทั้งคัน</p>
                             <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="scroll-reveal">
-                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-600 p-8 text-white text-center card-hover neon-glow">
-                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-400/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 p-8 text-white text-center card-hover neon-glow">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative z-10">
                             <div class="text-7xl mb-6 animate-float" style="animation-delay: 2.5s;">🔧</div>
                             <h3 class="text-2xl font-bold mb-3">ซ่อมบำรุงครบวงจร</h3>
-                            <p class="text-indigo-100 mb-4">งานซ่อมบำรุงแบบครบวงจร</p>
+                            <p class="text-teal-100 mb-4">งานซ่อมบำรุงแบบครบวงจร</p>
                             <div class="w-12 h-1 bg-white mx-auto rounded-full"></div>
                         </div>
                     </div>
@@ -444,7 +462,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
         <!-- Background Effects -->
         <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3C/g%3E%3C/svg%3E')]"></div>
         
@@ -453,26 +471,27 @@
                 <h2 class="text-4xl lg:text-5xl font-bold mb-4">
                     ติดต่อเรา
                 </h2>
-                <p class="text-xl text-blue-200 max-w-2xl mx-auto mb-8">
-                    พร้อมให้บริการคุณตลอด 24 ชั่วโมง
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                    พร้อมให้บริการคุณด้วยความเป็นมืออาชีพ
                 </p>
-                <div class="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="scroll-reveal">
                     <div class="glass-card rounded-2xl p-8 text-center card-hover neon-glow">
                         <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-br from-accent to-blue-400 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle">
+                            <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle">
                                 📍
                             </div>
                             <div class="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-ping"></div>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-accent">ที่อยู่</h3>
-                        <p class="text-blue-100 leading-relaxed">
-                            123 ถนนพหลโยธิน<br>
-                            แขวงลาดยาว เขตจตุจักร<br>
-                            กรุงเทพฯ 10900
+                        <h3 class="text-xl font-bold mb-4 text-orange-400">ที่อยู่</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            ซอยร่วมสุข 4/6<br>
+                            ถ.ติวานนท์<br>
+                            ต.บ้านใหม่ อ.เมืองปทุมธานี<br>
+                            จ.ปทุมธานี
                         </p>
                     </div>
                 </div>
@@ -480,23 +499,19 @@
                 <div class="scroll-reveal">
                     <div class="glass-card rounded-2xl p-8 text-center card-hover neon-glow">
                         <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle" style="animation-delay: 0.5s;">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle" style="animation-delay: 0.5s;">
                                 📞
                             </div>
                             <div class="absolute -top-2 -right-2 w-6 h-6 bg-red-400 rounded-full animate-ping"></div>
                         </div>
                         <h3 class="text-xl font-bold mb-4 text-green-400">โทรศัพท์</h3>
                         <div class="space-y-2">
-                            <p class="text-blue-100">
-                                <a href="tel:021234567" class="hover:text-green-400 transition-colors duration-300 font-medium">
-                                    02-123-4567
+                            <p class="text-gray-300">
+                                <a href="tel:0845545968" class="hover:text-green-400 transition-colors duration-300 font-medium text-lg">
+                                    084-554-5968
                                 </a>
                             </p>
-                            <p class="text-blue-100">
-                                <a href="tel:0891234567" class="hover:text-green-400 transition-colors duration-300 font-medium">
-                                    089-123-4567
-                                </a>
-                            </p>
+                            <p class="text-sm text-gray-400">คุณเอส (เจ้าของ)</p>
                         </div>
                     </div>
                 </div>
@@ -504,23 +519,19 @@
                 <div class="scroll-reveal">
                     <div class="glass-card rounded-2xl p-8 text-center card-hover neon-glow">
                         <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle" style="animation-delay: 1s;">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle" style="animation-delay: 1s;">
                                 📧
                             </div>
                             <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full animate-ping"></div>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-purple-400">อีเมล</h3>
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">อีเมล</h3>
                         <div class="space-y-2">
-                            <p class="text-blue-100">
-                                <a href="mailto:info@ssauto.com" class="hover:text-purple-400 transition-colors duration-300 font-medium">
-                                    info@ssauto.com
+                            <p class="text-gray-300">
+                                <a href="mailto:s.s.auto@hotmail.com" class="hover:text-blue-400 transition-colors duration-300 font-medium">
+                                    s.s.auto@hotmail.com
                                 </a>
                             </p>
-                            <p class="text-blue-100">
-                                <a href="mailto:service@ssauto.com" class="hover:text-purple-400 transition-colors duration-300 font-medium">
-                                    service@ssauto.com
-                                </a>
-                            </p>
+                            <p class="text-sm text-gray-400">สอบถามรายละเอียด</p>
                         </div>
                     </div>
                 </div>
@@ -528,16 +539,16 @@
                 <div class="scroll-reveal">
                     <div class="glass-card rounded-2xl p-8 text-center card-hover neon-glow">
                         <div class="relative mb-6">
-                            <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle" style="animation-delay: 1.5s;">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce-gentle" style="animation-delay: 1.5s;">
                                 🕒
                             </div>
                             <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-ping"></div>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-yellow-400">เวลาทำการ</h3>
-                        <div class="space-y-2 text-blue-100">
+                        <h3 class="text-xl font-bold mb-4 text-purple-400">เวลาทำการ</h3>
+                        <div class="space-y-2 text-gray-300">
                             <p><span class="font-medium">จันทร์-เสาร์:</span> 8:00-18:00</p>
                             <p><span class="font-medium">อาทิตย์:</span> 8:00-17:00</p>
-                            <p class="text-accent font-medium">🚨 24/7 Emergency</p>
+                            <p class="text-orange-400 font-medium text-sm">📱 รับสายตลอด 24 ชั่วโมง</p>
                         </div>
                     </div>
                 </div>
@@ -547,121 +558,141 @@
             <div class="mt-16 text-center scroll-reveal">
                 <h3 class="text-2xl font-bold mb-8 gradient-text">ติดต่อเราได้ทันที</h3>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="https://www.facebook.com/ssautocarservice" target="_blank" 
-                       class="group flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 neon-glow">
-                        <span class="text-2xl">📘</span>
-                        <span class="font-semibold">Facebook</span>
-                        <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                    </a>
-                    
-                    <a href="https://line.me/ti/p/~ssauto" target="_blank"
-                       class="group flex items-center space-x-3 bg-green-500 hover:bg-green-600 px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25 neon-glow">
-                        <span class="text-2xl">💬</span>
-                        <span class="font-semibold">Line Chat</span>
-                        <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                    </a>
-                    
-                    <a href="tel:0891234567"
-                       class="group flex items-center space-x-3 bg-red-500 hover:bg-red-600 px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/25 neon-glow">
+                    <a href="tel:0845545968" 
+                       class="group flex items-center space-x-3 bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25 neon-glow">
                         <span class="text-2xl">📞</span>
-                        <span class="font-semibold">โทรเลย</span>
+                        <span class="font-semibold">โทรเลย 084-554-5968</span>
                         <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
                     </a>
+                    
+                    <a href="mailto:s.s.auto@hotmail.com"
+                       class="group flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 neon-glow">
+                        <span class="text-2xl">📧</span>
+                        <span class="font-semibold">ส่งอีเมล</span>
+                        <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                    </a>
+                    
+                    <a href="https://maps.google.com/?q=ซอยร่วมสุข 4/6 ถ.ติวานนท์ ต.บ้านใหม่ อ.เมืองปทุมธานี" target="_blank"
+                       class="group flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-red-600 px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/25 neon-glow">
+                        <span class="text-2xl">🗺️</span>
+                        <span class="font-semibold">ดูแผนที่</span>
+                        <span class="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Google Maps Embed -->
+            <div class="mt-16 scroll-reveal">
+                <div class="bg-gray-800 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">แผนที่เดินทาง</h3>
+                    <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.5533173758266!2d100.55555334759352!3d13.956111745442287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e283e0b91422d7%3A0xb0be3cc5ed1b5dfd!2z4Lir4LiI4LiBLiDguYDguK3guKou4LmA4Lit4LiqLuC4reC4reC5guC4leC5iQ!5e1!3m2!1sth!2sth!4v1752056831142!5m2!1sth!2sth" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="mt-4 text-center text-gray-400">
+                        <p>📍 ซอยร่วมสุข 4/6 ถ.ติวานนท์ ต.บ้านใหม่ อ.เมืองปทุมธานี จ.ปทุมธานี</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/50 to-purple-900/50"></div>
+    <footer class="bg-black text-white py-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="space-y-4">
                     <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-2xl">
-                            <span class="text-white text-xl font-bold">S</span>
+                        <div class="logo-container">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA..." alt="SS Auto Logo" class="h-12 w-auto">
                         </div>
                         <div>
                             <h3 class="text-xl font-bold gradient-text">SS AUTO</h3>
-                            <p class="text-sm text-gray-400">Premium Car Service</p>
+                            <p class="text-sm text-gray-400">Paint & Body Repair</p>
                         </div>
                     </div>
                     <p class="text-gray-400 leading-relaxed">
-                        ศูนย์บริการรถยนต์ครบวงจรที่คุณไว้วางใจได้ 
-                        มากกว่า 15 ปี แห่งความเป็นเลิศ
+                        ศูนย์บริการรถยนต์ครบวงจร เชี่ยวชาญด้านพ่นสีรถยนต์และซ่อมตัวถัง 
+                        ที่คุณไว้วางใจได้
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/ssautocarservice" target="_blank" 
-                           class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors transform hover:scale-110">
-                            📘
-                        </a>
-                        <a href="https://line.me/ti/p/~ssauto" target="_blank"
-                           class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors transform hover:scale-110">
-                            💬
-                        </a>
-                        <a href="tel:0891234567"
-                           class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors transform hover:scale-110">
-                            📞
-                        </a>
-                    </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-primary">บริการหลัก</h4>
+                    <h4 class="text-lg font-semibold mb-4 text-orange-400">บริการหลัก</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#services" class="hover:text-accent transition-colors flex items-center space-x-2">
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors flex items-center space-x-2">
                             <span>🎨</span><span>พ่นสีรถยนต์</span>
                         </a></li>
-                        <li><a href="#services" class="hover:text-accent transition-colors flex items-center space-x-2">
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors flex items-center space-x-2">
                             <span>🔧</span><span>ซ่อมตัวถัง</span>
                         </a></li>
-                        <li><a href="#services" class="hover:text-accent transition-colors flex items-center space-x-2">
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors flex items-center space-x-2">
                             <span>✨</span><span>ขัดเคลือบ</span>
                         </a></li>
-                        <li><a href="#services" class="hover:text-accent transition-colors flex items-center space-x-2">
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors flex items-center space-x-2">
                             <span>🛠️</span><span>ซ่อมบำรุง</span>
                         </a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-primary">ข้อมูลติดต่อ</h4>
+                    <h4 class="text-lg font-semibold mb-4 text-orange-400">ข้อมูลติดต่อ</h4>
                     <div class="space-y-3 text-gray-400">
                         <div class="flex items-center space-x-3">
-                            <span class="text-accent">📍</span>
-                            <span>123 ถนนพหลโยธิน กรุงเทพฯ</span>
+                            <span class="text-orange-400">📍</span>
+                            <span>ซอยร่วมสุข 4/6 ถ.ติวานนท์<br>ต.บ้านใหม่ อ.เมืองปทุมธานี</span>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <span class="text-accent">📞</span>
-                            <span>02-123-4567</span>
+                            <span class="text-orange-400">📞</span>
+                            <a href="tel:0845545968" class="hover:text-orange-400 transition-colors">084-554-5968</a>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <span class="text-accent">📧</span>
-                            <span>info@ssauto.com</span>
+                            <span class="text-orange-400">📧</span>
+                            <a href="mailto:s.s.auto@hotmail.com" class="hover:text-orange-400 transition-colors">s.s.auto@hotmail.com</a>
                         </div>
                         <div class="flex items-center space-x-3">
-                            <span class="text-accent">🕒</span>
+                            <span class="text-orange-400">🕒</span>
                             <span>จันทร์-เสาร์: 8:00-18:00</span>
                         </div>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4 text-primary">ข่าวสารและโปรโมชั่น</h4>
-                    <p class="text-gray-400 mb-4">
-                        ติดตามข่าวสารและโปรโมชั่นพิเศษ
-                    </p>
-                    <div class="glass-card rounded-lg p-4">
-                        <div class="flex items-center space-x-2 mb-2">
-                            <span class="text-2xl">🎉</span>
-                            <span class="text-accent font-semibold">โปรโมชั่นพิเศษ</span>
+                    <h4 class="text-lg font-semibold mb-4 text-orange-400">ข้อมูลเพิ่มเติม</h4>
+                    <div class="space-y-4">
+                        <div class="glass-card rounded-lg p-4">
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="text-2xl">🎯</span>
+                                <span class="text-orange-400 font-semibold">พิเศษ!</span>
+                            </div>
+                            <p class="text-sm text-gray-300">
+                                ตรวจเช็คสภาพรถฟรี
+                                สำหรับลูกค้าใหม่
+                            </p>
                         </div>
-                        <p class="text-sm text-gray-300">
-                            ลูกค้าใหม่ รับส่วนลด 20% 
-                            สำหรับงานพ่นสีรถยนต์
-                        </p>
+                        <div class="flex space-x-4">
+                            <a href="tel:0845545968" 
+                               class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors transform hover:scale-110">
+                                📞
+                            </a>
+                            <a href="mailto:s.s.auto@hotmail.com"
+                               class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors transform hover:scale-110">
+                                📧
+                            </a>
+                            <a href="https://maps.google.com/?q=ซอยร่วมสุข 4/6 ถ.ติวานนท์ ต.บ้านใหม่ อ.เมืองปทุมธานี" target="_blank"
+                               class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors transform hover:scale-110">
+                                🗺️
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -669,12 +700,12 @@
             <div class="border-t border-gray-800 mt-12 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-gray-400 text-sm">
-                        &copy; 2025 SS AUTO Car Service Center. All rights reserved.
+                        &copy; 2025 SS AUTO Paint & Body Repair. All rights reserved.
                     </p>
                     <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-accent transition-colors text-sm">นโยบายความเป็นส่วนตัว</a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition-colors text-sm">เงื่อนไขการใช้งาน</a>
-                        <a href="#" class="text-gray-400 hover:text-accent transition-colors text-sm">ติดต่อเรา</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors text-sm">นโยบายความเป็นส่วนตัว</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors text-sm">เงื่อนไขการใช้งาน</a>
+                        <a href="#contact" class="text-gray-400 hover:text-orange-400 transition-colors text-sm">ติดต่อเรา</a>
                     </div>
                 </div>
             </div>
@@ -682,15 +713,15 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-110 opacity-0 invisible z-50 neon-glow">
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-110 opacity-0 invisible z-50 neon-glow">
         <span class="text-2xl">↑</span>
     </button>
 
     <!-- Loading Screen -->
-    <div id="loading" class="fixed inset-0 bg-gray-900 z-50 flex items-center justify-center">
+    <div id="loading" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
         <div class="text-center">
-            <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-4 animate-bounce">
-                <span class="text-white text-2xl font-bold">S</span>
+            <div class="logo-container mb-4 animate-pulse">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA..." alt="SS Auto Logo" class="h-24 w-auto mx-auto">
             </div>
             <p class="text-white text-lg">กำลังโหลด...</p>
         </div>
